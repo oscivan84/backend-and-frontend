@@ -1,0 +1,24 @@
+crear elproyecto: npm init -y
+agragamos en package.json: "type":"module" despues de "main" paraa trabajar con import
+
+instalar los modulos para trabajar npm i express cors mysql2 sequelize
+
+crear las carpetas necesarias y el archivo app.js
+
+configurar la conexion a la base de datos
+    1. crear conexion a la base de datos en db.js
+
+crear los modelos para gestionar la base de datos
+ clientmodels.js
+
+configurar el controlador
+    ClientController.js
+
+configurar las rutas para cada metodo del controlador
+    routes.js
+
+configurar el archivo principal
+    app.js
+    
+
+
