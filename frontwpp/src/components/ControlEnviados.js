@@ -1,18 +1,11 @@
 import axios from "axios";
 import React,{ useState, useEffect } from "react"; //hugs
-import ModalClientAdd from "./client/ClientAdd";
-
 
 const URI = 'http://localhost:8000/enviados/';
 
 
 const ControlEnviados = () => {
 
-    //modal ClientAdd
-    const [clientAdd, setClientAdd] = useState(false);
-    const closeClientAdd = () => setClientAdd(false);
-    
-    
     
     //configurar los hooks useState y useEffec
     const [clients, setClients] = useState([])
@@ -27,21 +20,11 @@ const ControlEnviados = () => {
         setClients(res.data)
     }
 
-    //procedimiento para eliminar
-    const deleteClient = async (id) => {
-       const res = await axios.delete(`${URI}${id}`)
-        getClients()
-        alert(res.data.message)
-    }
-
-    
-
     return(
         <>
             <div className='container'>
                 <div className='row'>
                     <div className='col'>
-                        {/* <Link to='/create' className='btn btn-primary mt-2 mb-2' ><i class="fa-solid fa-user-plus"></i></Link> */}
                         <table className='table'>
                             <thead className='table-primary'>
                                 <tr>
@@ -57,8 +40,7 @@ const ControlEnviados = () => {
                                     <tr key={ client.id }>
                                         <td>{client.id_cliente}</td>
                                         <td>{client.fecha}</td>
-                                        <td>{client.mensaje}</td>
-                                        
+                                        <td>{client.mensaje}</td>          
                                         <td>{client.estado}</td>
                                       </tr>
                                 )) }

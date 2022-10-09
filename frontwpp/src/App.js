@@ -7,6 +7,7 @@ import CompShowClients from './components/ShowClients';
 import Autentication from './components/Autentication';
 import Menu from './components/Menu';
 import ControlEnviados from './components/ControlEnviados';
+import EnviarMasivo from './components/EnviarMasivo';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Route path='/' element={ <Autentication /> } />
           <Route path='/listaClientes' element={ <CompShowClients />} />
           <Route path='/controlEnviados' element={ <ControlEnviados />  } />
+          <Route path='/EnviarMasivo' element={ <EnviarMasivo />  } />
         </Route>
         </Routes>
       </BrowserRouter>

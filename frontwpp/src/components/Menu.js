@@ -15,7 +15,9 @@ const Menu = () => {
                     <div className="border border-light border-3 rounded-pill">
                         <b><Link to="/">Registro Usuarios</Link></b>
                     </div>
-
+                    <div className="border border-light border-3 rounded-pill">
+                        <b><Link to="/EnviarMasivo">Enviar Masivo</Link></b>
+                    </div>
                 </div>
             </div>
             <div className="col-10"><Outlet /></div>
