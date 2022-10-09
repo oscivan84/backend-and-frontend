@@ -1,8 +1,7 @@
 import axios from "axios";
 import React,{ useState, useEffect } from "react"; //hugs
-import { Link } from "react-router-dom";
 import ModalClientAdd from "./client/ClientAdd";
-import ClientEdit from "./client/ClientEdit";
+
 
 const URI = 'http://localhost:8000/enviados/';
 
@@ -12,7 +11,7 @@ const ControlEnviados = () => {
     //modal ClientAdd
     const [clientAdd, setClientAdd] = useState(false);
     const closeClientAdd = () => setClientAdd(false);
-    const showClientAdd = () => setClientAdd(true);
+    
     
     
     //configurar los hooks useState y useEffec
@@ -49,7 +48,7 @@ const ControlEnviados = () => {
                                     <th>id_cliente</th>
                                     <th>Fecha</th>
                                     <th>Mensaje</th>
-                                    <th>Estado</th>
+                                    <th>Estado </th>
 
                                 </tr>
                             </thead>
@@ -59,6 +58,8 @@ const ControlEnviados = () => {
                                         <td>{client.id_cliente}</td>
                                         <td>{client.fecha}</td>
                                         <td>{client.mensaje}</td>
+                                        
+                                        <td>{client.estado}</td>
                                       </tr>
                                 )) }
                             </tbody>
@@ -66,8 +67,7 @@ const ControlEnviados = () => {
                     </div>
                 </div>
             </div>
-            <ModalClientAdd show={clientAdd} handleClose={closeClientAdd} getClients={getClients} />        
-        </>
+            </>
     )
 }
 
