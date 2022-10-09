@@ -5,6 +5,7 @@ import db from "./database/db.js";
 //importar el enrutador
 import clientRoutes from './routes/ClientRoutes.js'
 import userRoutes from './routes/UserRoutes.js'
+import enviadoRoutes from './routes/EnviadoRouter.js'
 
 const app = express()
 
@@ -13,6 +14,8 @@ app.use(express.json())
 
 app.use('/clients', clientRoutes)
 app.use('/users', userRoutes)
+app.use('/enviados', enviadoRoutes)
+
 
 try {
     await db.authenticate()

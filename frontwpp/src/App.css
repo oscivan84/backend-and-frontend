@@ -36,3 +36,15 @@
     transform: rotate(360deg);
   }
 }
+
+.FormatoMenu{
+  background-color:#282c34;
+  color: white !important;
+  align-content: left;
+  height: 100%;
+  width: 200px;
+}
+.FormatoMenu a{
+  color:white;
+  text-decoration:none;
+}
